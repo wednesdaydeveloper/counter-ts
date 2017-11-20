@@ -18,10 +18,10 @@ const Counter = (props: StateProps & DispatchProps) => {
         <div>
           <p>{props.loadingCount === 0 ? '' : 'Loading...'}</p>
           <p>{`score: ${props.num}`}</p>
-          <RaisedButton onClick={() => props.onIncrement(3)} label="Increment 3"/>
-          <RaisedButton onClick={() => props.onDecrement(2)} label="Increment 2"/>
-          <RaisedButton onClick={() => props.onIncrementAsync(3)}label="Increment 3 Async"/>
-          <RaisedButton onClick={() => props.onDecrementAsync(2)}label="Increment 3 Async"/>
+          <RaisedButton label="Increment 3"       onClick={() => props.onIncrement(3)}      />
+          <RaisedButton label="Increment 2"       onClick={() => props.onDecrement(2)}      />
+          <RaisedButton label="Increment 3 Async" onClick={() => props.onIncrementAsync(3)} />
+          <RaisedButton label="Increment 3 Async" onClick={() => props.onDecrementAsync(2)} />
         </div>
       );
 };
