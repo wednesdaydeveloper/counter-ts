@@ -5,10 +5,10 @@ import { delay } from 'redux-saga';
 //
 //  action
 //
-const INCREMENT_NAME: string = 'counter/increment';
-const DECREMENT_NAME: string = 'counter/decrement';
-const INCREMENT_ASYNC_NAME: string = 'counter/increment_async';
-const DECREMENT_ASYNC_NAME: string = 'counter/decrement_async';
+const INCREMENT_NAME      : string  = 'counter/increment';
+const DECREMENT_NAME      : string  = 'counter/decrement';
+const INCREMENT_ASYNC_NAME: string  = 'counter/increment_async';
+const DECREMENT_ASYNC_NAME: string  = 'counter/decrement_async';
 
 export const increment      = createAction<number, number>(INCREMENT_NAME, (num: number) => num);
 export const decrement      = createAction<number, number>(DECREMENT_NAME, (num: number) => num);

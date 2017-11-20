@@ -5,11 +5,15 @@ import './index.css';
 import Counter from './counter/Container';
 import { Provider } from 'react-redux';
 import store from './Store';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 ReactDOM.render(
   <Provider store={store}>
     <div>
-      <Counter />
+      <MuiThemeProvider muiTheme={getMuiTheme()}>
+        <Counter />
+      </MuiThemeProvider>    
     </div>
   </Provider>,
   document.getElementById('root') as HTMLElement
