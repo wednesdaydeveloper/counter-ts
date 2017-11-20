@@ -1,11 +1,16 @@
 import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
-import reducer from './counter/module';
+import createSagaMiddleware from 'redux-saga';
+
+import reducer, { saga } from './counter/module';
 
 const logger = createLogger();
+const sagaMiddleware = createSagaMiddleware();
 
 export default createStore(
   reducer,
-  applyMiddleware(thunk, logger)
+  applyMiddleware(sagaMiddleware, logger)
 );
+
+// Saga を起動する
+sagaMiddleware.run(saga);
